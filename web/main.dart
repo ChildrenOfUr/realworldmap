@@ -7,6 +7,7 @@ import 'dart:html';
 import 'package:google_maps/google_maps.dart';
 
 part 'lib/devmarkers.dart';
+part 'lib/overpan.dart';
 part 'lib/playermarkers.dart';
 
 final LatLng CENTER = new LatLng(0, 0);
@@ -24,6 +25,7 @@ void main() {
 
 	final GMap MAP = new GMap(querySelector('#map'), MAP_OPTIONS);
 
+	OverPan.preventOverPanning(MAP);
 	DevMarkers.displayAll(MAP);
 	PlayerMarkers.displayAll(MAP);
 }
