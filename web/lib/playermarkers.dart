@@ -44,15 +44,11 @@ abstract class PlayerMarkers {
 
 	static Future<bool> displayAll(GMap map) async {
 		try {
-			List<String> playerIps = await getServerIps();
+			List<String> ips = await getServerIps();
 
-			List<Future> queue = [];
-			playerIps.forEach((String ip) {
-				queue.add(locateIp(ip));
-			});
+			ips.forEach((String ip) async {
+				PlayerLocation location = await locateIp(ip);
 
-			List<PlayerLocation> playerLocations = await Future.wait(queue);
-			playerLocations.forEach((PlayerLocation location) {
 				if (location == null) {
 					return;
 				}
