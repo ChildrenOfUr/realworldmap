@@ -52,14 +52,14 @@ abstract class PlayerMarkers {
 			});
 
 			List<PlayerLocation> playerLocations = await Future.wait(queue);
-			playerLocations.forEach((PlayerLocation location) {
-				if (location == null) {
+			playerLocations.forEach((PlayerLocation player) {
+				if (player == null) {
 					return;
 				}
 
 				new Marker(new MarkerOptions()
-					..position = location.location
-					..title = 'Player near ${location.city}'
+					..position = player.location
+					..title = 'Player near ${player.city}'
 					..cursor = 'help'
 					..icon = ICON
 					..map = map);
