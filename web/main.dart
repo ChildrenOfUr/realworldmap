@@ -7,6 +7,7 @@ import 'dart:html';
 import 'package:google_maps/google_maps.dart';
 
 part 'lib/devmarkers.dart';
+part 'lib/miscpoints.dart';
 part 'lib/overpan.dart';
 part 'lib/playermarkers.dart';
 
@@ -28,4 +29,5 @@ void main() {
 	OverPan.preventOverPanning(MAP);
 	DevMarkers.displayAll(MAP);
 	PlayerMarkers.displayAll(MAP);
+	MiscLocations.displayAll(MAP);
 }
