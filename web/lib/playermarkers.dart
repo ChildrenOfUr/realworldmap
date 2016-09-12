@@ -44,9 +44,9 @@ abstract class PlayerMarkers {
 
 	static Future<bool> displayAll(GMap map) async {
 		try {
-			List<String> ips = await getServerIps();
+			List<String> playerIps = await getServerIps();
 
-			ips.forEach((String ip) async {
+			Future.forEach(playerIps, (String ip) async {
 				PlayerLocation location = await locateIp(ip);
 
 				if (location == null) {
