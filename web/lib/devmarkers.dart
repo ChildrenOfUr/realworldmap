@@ -19,6 +19,7 @@ abstract class DevMarkers {
 		new DevLocation(new LatLng(53.5511, 9.9937), 'Hamburg'),
 		new DevLocation(new LatLng(33.9526, -84.5499), 'Marietta'),
 		new DevLocation(new LatLng(-31.2532, 146.9211), 'New South Wales'),
+		new DevLocation(new LatLng(38.8814, -94.8191), 'Olathe'),
 		new DevLocation(new LatLng(40.4406, -79.9959), 'Pittsburgh', 2),
 		new DevLocation(new LatLng(45.5231, -122.6765), 'Portland'),
 		new DevLocation(new LatLng(37.7749, -122.4194), 'San Francisco'),

@@ -13,7 +13,7 @@ abstract class PlayerMarkers {
 
 	static Future<List<String>> getServerIps() async {
 		try {
-			String json = await HttpRequest.getString('http://server.childrenofur.com:8181/addresses');
+			String json = await HttpRequest.getString('https://server.childrenofur.com:8181/addresses');
 			return JSON.decode(json);
 		} catch (e) {
 			print('Error getting IPs from server: $e');
